@@ -103,7 +103,7 @@ const QuizPage = () => {
               </div>
             </div>
           ) : (
-            <div className="m-7 p-4 md:m-10 md:p-7 bg-slate-100 md:h-[600px] md:w-1/2 rounded-xl shadow-sm">
+            <div className="m-7 p-4 md:m-7 md:p-4 flex items-center justify-center bg-slate-100 md:h-[600px] md:w-1/2 rounded-xl shadow-sm">
               <div className="space-y-3 md:space-y-5 text-center">
                 <h3 className="text-center text-3xl font-bold">Results</h3>
                 <h3 className="text-center text-xl font-medium">
