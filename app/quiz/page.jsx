@@ -55,18 +55,18 @@ const QuizPage = () => {
     <>
       <div>
         <div className="p-6 shadow-sm">
-          <h1 className="text-3xl text-center font-semibold italic underline">
+          <h1 className="text-xl md:text-3xl text-center font-semibold italic underline">
             Knock-Knock&#33; Quiz Is Here
           </h1>
-          <div className="flex text-3xl font-medium font-serif text-fuchsia-600 items-center justify-center p-8">
+          <div className="flex text-xl md:text-3xl font-medium font-serif text-fuchsia-600 items-center justify-center p-8">
             <h2>Questions : {activeQuestion + 1}</h2>
             <span>/{questions.length}</span>
           </div>
         </div>
         <div className="flex items-center justify-center">
           {!showResult ? (
-            <div className="m-10 p-7 bg-slate-100 h-[600px] w-1/2 rounded-xl shadow-sm">
-              <h3 className="text-3xl font-medium text-center">
+            <div className="m-7 p-4 md:m-10 md:p-7 bg-slate-100 md:h-[600px] md:w-1/2 rounded-xl shadow-sm">
+              <h3 className="text-xl md:text-3xl font-medium text-center">
                 {questions[activeQuestion].question}{" "}
               </h3>
               {answers.map((answer, idx) => (
@@ -103,8 +103,8 @@ const QuizPage = () => {
               </div>
             </div>
           ) : (
-            <div className="m-10 p-7 bg-slate-100 h-[600px] w-1/2 rounded-xl shadow-sm">
-              <div className="space-y-5 text-center">
+            <div className="m-7 p-4 md:m-10 md:p-7 bg-slate-100 md:h-[600px] md:w-1/2 rounded-xl shadow-sm">
+              <div className="space-y-3 md:space-y-5 text-center">
                 <h3 className="text-center text-3xl font-bold">Results</h3>
                 <h3 className="text-center text-xl font-medium">
                   Overall {(result.score / questions.length) * 100}&#37;
@@ -123,7 +123,7 @@ const QuizPage = () => {
                 </p>
                 <button
                   onClick={() => window.location.reload()}
-                  className="bg-yellow-300 p-3 text-xl m-4 rounded-md"
+                  className="bg-yellow-300 p-1 md:p-3 text-xl m-4 rounded-md"
                 >
                   Restart
                 </button>
