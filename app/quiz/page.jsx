@@ -32,10 +32,10 @@ const QuizPage = () => {
   const nextQuestion = () => {
     setSelectedAnswerIndex(null);
     setResult((prev) =>
-      setSelectedAnswer
+      selectedAnswer
         ? {
             ...prev,
-            score: prev.score + 1,
+            score: prev.score + 5,
             correctAnswers: prev.correctAnswers + 1,
           }
         : {
@@ -107,7 +107,7 @@ const QuizPage = () => {
               <div className="space-y-3 md:space-y-5 text-center">
                 <h3 className="text-center text-3xl font-bold">Results</h3>
                 <h3 className="text-center text-xl font-medium">
-                  Overall {(result.score / questions.length) * 100}&#37;
+                  Overall {(result.score / 25) * 100}&#37;
                 </h3>
                 <p>
                   Total Questions: <span>{question.length}</span>
